@@ -1,0 +1,83 @@
+/* Shared by both language editions. No external fonts or dependencies. */
+:root{color-scheme:dark;--paper:#080808;--ink:#f5f4f7;--muted:#b3afb9;--line:#302d35;--accent:#b29af8;--serif:Georgia,'Times New Roman',serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:2rem}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:1rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+::selection{background:#b29af8;color:#080808}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:6px;border-radius:1px}
+a:hover{color:var(--accent)}
+.shell{width:min(100% - 7rem,1080px);margin-inline:auto}
+.skip{position:absolute;top:1rem;left:1rem;padding:.65rem 1rem;background:var(--ink);color:var(--paper);transform:translateY(-180%);z-index:10}
+.skip:focus{transform:translateY(0)}
+.header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;padding-block:2rem;border-bottom:1px solid var(--line);gap:2rem}
+.wordmark{font-family:var(--serif);font-size:1.6rem;letter-spacing:-.08em;padding-right:.15em}
+.header-right,.navigation,.language{display:flex;align-items:center}
+.header-right{gap:2.75rem;flex-wrap:wrap}
+.navigation{gap:1.8rem;font-size:.875rem;flex-wrap:wrap}
+.language{border:1px solid var(--line);padding:3px;border-radius:4px;gap:2px;font-size:.8125rem}
+.language a{min-width:38px;min-height:34px;display:grid;place-items:center;border-radius:2px}
+.language a[aria-current=page]{background:var(--ink);color:var(--paper)}
+.hero{padding-block:5.25rem 5.5rem}
+.eyebrow,.section-title{font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.14em}
+.eyebrow{margin:0 0 1.3rem;color:var(--muted)}
+h1{font-family:var(--serif);font-size:clamp(3rem,6.9vw,5.8rem);font-weight:400;line-height:1.05;letter-spacing:-.055em;margin:0}
+h1 span{display:block}
+h1 .first-name{color:var(--accent)}
+.intro{margin:1.7rem 0 0;font-size:1.125rem;color:var(--ink);max-width:32rem}
+.section-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding-bottom:1.25rem}
+.section-title{margin:0}
+.section-note{font-size:.8125rem;color:var(--muted);margin:0}
+.works{list-style:none;padding:0;margin:0;border-top:1px solid var(--ink)}
+.work{display:grid;grid-template-columns:2.6rem minmax(0,1fr) 9rem 1.25rem;align-items:center;gap:1.25rem;padding:1.75rem 0;border-bottom:1px solid var(--line);transition:background-color .18s ease,color .18s ease}
+.work:hover{background:#15111e}
+.work-number{font-size:.75rem;font-variant-numeric:tabular-nums;color:var(--muted);align-self:start;padding-top:.4rem}
+.work-title{font-family:var(--serif);font-size:1.5rem;font-weight:400;line-height:1.3;letter-spacing:-.02em;margin:0;max-width:35rem;text-wrap:pretty}
+.work-topic{display:block;margin-top:.45rem;color:var(--muted);font-size:.8125rem}
+.work-meta{font-size:.8125rem;color:var(--muted);text-align:right;align-self:center}
+.work-meta span{display:block}
+.work-meta .original-language{font-size:.75rem;margin-top:.25rem}
+.arrow{font-size:1.3rem;color:var(--accent);text-align:right}
+.about{display:grid;grid-template-columns:1fr 3fr;gap:2rem;padding-block:5rem;border-bottom:1px solid var(--line)}
+.about .section-title{padding-top:.4rem}
+.bio{font-size:1.125rem;max-width:39rem;margin:0;line-height:1.65;text-wrap:pretty}
+.credits{display:flex;flex-wrap:wrap;gap:.4rem 1.35rem;margin:1.4rem 0 0;color:var(--muted);font-size:.875rem}
+.credits a,.social a{border-bottom:1px solid var(--line)}
+.contact{display:flex;align-items:start;justify-content:space-between;gap:2rem;padding-block:3.4rem}
+.contact .section-title{margin-bottom:.85rem}
+.email{font-family:var(--serif);font-size:clamp(1.4rem,3.5vw,2.25rem);letter-spacing:-.03em;overflow-wrap:anywhere}
+.social{display:flex;flex-wrap:wrap;gap:1.35rem;font-size:.875rem;padding-top:2.15rem}
+.footer{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding:1.25rem 0 2rem;border-top:1px solid var(--line);color:var(--muted);font-size:.75rem}
+@media(min-width:1300px){.hero{padding-top:6rem}}
+@media(max-width:700px){.shell{width:calc(100% - 2.5rem)}.header{padding-block:1.3rem;gap:1rem}.header-right{gap:1.25rem}.navigation{gap:1rem}.navigation .about-link{display:none}.hero{padding-block:3.6rem 3.75rem}h1{font-size:clamp(2.7rem,10vw,4.5rem)}.intro{font-size:1rem;max-width:23rem}.work{grid-template-columns:1.3rem minmax(0,1fr) 1rem;column-gap:.8rem;row-gap:.55rem;padding-block:1.35rem}.work-title{font-size:1.3rem}.work-meta{grid-column:2;grid-row:2;text-align:left;display:flex;gap:.7rem;align-items:center}.work-meta .original-language{margin:0}.arrow{grid-column:3;grid-row:1}.about{grid-template-columns:1fr;padding-block:3.25rem;gap:1.4rem}.bio{font-size:1rem}.contact{flex-direction:column;padding-block:2.75rem;gap:1.2rem}.social{padding-top:0}.section-note{font-size:.75rem}}
+@media(max-width:380px){.navigation{gap:.65rem}.header-right{gap:.75rem}.language a{min-width:32px}.section-head{align-items:start;flex-direction:column;gap:.4rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.work{transition:none}}
+@media print{.skip,.navigation,.language,.arrow{display:none}.shell{width:100%}.hero{padding-block:2rem}.about{padding-block:2rem}.work{break-inside:avoid}.contact{padding-block:2rem}}
+
+/* Graphic editorial identity: restrained typography, publication-specific symbols. */
+:root{--sans:'Helvetica Neue',Helvetica,Arial,sans-serif;--mono:'SFMono-Regular',Consolas,'Liberation Mono',monospace;--nacional:#79aeff;--substack:#ff9859;--newsbtc:#74d99a;--bitcoinist:#efce62}
+.wordmark{font-family:var(--sans);font-weight:600;font-size:1.5rem;letter-spacing:-.08em}
+.hero{padding-block:5.4rem 4.8rem}
+h1{font-family:var(--sans);font-weight:500;font-size:clamp(3.2rem,8vw,7rem);line-height:.99;letter-spacing:-.065em}
+h1 .first-name{color:var(--accent)}
+h1 span+span{font-size:.74em;margin-top:.17em;letter-spacing:-.055em}
+.intro{display:flex;align-items:center;flex-wrap:wrap;gap:.8em;margin-top:2rem;font-family:var(--mono);font-size:.875rem;letter-spacing:.12em;text-transform:uppercase}
+.role-divider{color:var(--accent);font-size:1.6em;line-height:1;font-weight:400}
+.works{border-top-color:var(--line)}
+.work{grid-template-columns:2.6rem minmax(0,1fr) 9rem 1.25rem;padding-block:2rem}
+.work-title{font-family:var(--sans);font-size:1.375rem;font-weight:400;letter-spacing:-.025em;line-height:1.35}
+.publication-symbol{font-family:Arial,sans-serif;display:inline-flex;align-items:center;justify-content:center;width:1.2em;font-size:1.8rem;line-height:1;flex-shrink:0}
+.work>.publication-symbol{align-self:start;margin-top:.06em}
+.nacional{color:var(--nacional)}.substack{color:var(--substack)}.newsbtc{color:var(--newsbtc)}.bitcoinist{color:var(--bitcoinist)}.research{color:var(--accent)}
+.work-meta,.work-topic{font-size:.75rem;letter-spacing:.015em}
+.work:hover .work-title{text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.25em}
+.profiles{display:grid;grid-template-columns:1fr 1fr;gap:3rem;padding-block:4rem;border-bottom:1px solid var(--line)}
+.profile-link{display:block;min-width:0}
+.profile-caption{font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.profile-name{display:flex;align-items:center;gap:.65rem;font-size:clamp(1.5rem,3vw,2rem);letter-spacing:-.04em;margin-top:.9rem}
+.profile-name .publication-symbol{font-size:1.6rem}
+.profile-arrow{margin-left:auto;color:var(--muted);font-size:1.5rem}
+.profile-link:hover .profile-arrow{color:var(--accent)}
+.email{font-family:var(--sans);font-weight:400;font-size:clamp(1.3rem,3vw,2rem);letter-spacing:-.045em}
+@media(max-width:700px){.hero{padding-block:3.5rem 3.25rem}h1{font-size:clamp(3.1rem,12vw,5.7rem)}h1 span+span{font-size:.69em}.intro{font-size:.75rem;gap:.65em;margin-top:1.7rem}.work{grid-template-columns:1.4rem minmax(0,1fr) 1rem;gap:.6rem .9rem;padding-block:1.5rem}.work-title{font-size:1.1875rem}.work>.publication-symbol{font-size:1.45rem}.profiles{gap:2.25rem;padding-block:3rem}.profile-name{font-size:1.45rem;flex-wrap:wrap;gap:.5rem}.profile-name .publication-symbol{font-size:1.25rem}.profile-arrow{font-size:1.15rem}.profile-caption{font-size:.75rem}.work-meta{flex-wrap:wrap}}
+@media(max-width:480px){.profiles{grid-template-columns:1fr;gap:2rem}.profile-name{font-size:1.6rem}}
